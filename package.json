@@ -1,6 +1,7 @@
 {
-  "name": "angular2-hotkeys",
-  "version": "2.1.4",
+  "name": "@rezuq/angular2-hotkeys",
+  "version": "2.2.0",
+  "description": "fork of brtnshrdr/angular2-hotkeys",
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "test": "tsc && karma start",
@@ -11,15 +12,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:brtnshrdr/angular2-hotkeys.git"
+    "url": "git@github.com:axinedy/angular2-hotkeys.git"
   },
   "author": {
     "name": "Nick Richardson",
     "email": "nick.richardson@mediapixeldesign.com"
   },
   "keywords": [
-    "angular",
-    "angular2",
+    "angular5",
+    "angular6",
+    "angular7",
     "hotkeys",
     "keyboard",
     "shortcut"
@@ -51,5 +53,6 @@
   },
   "engines": {
     "node": ">=0.8.0"
-  }
+  },
+  "homepage": "https://github.com/axinedy/angular2-hotkeys"
 }
