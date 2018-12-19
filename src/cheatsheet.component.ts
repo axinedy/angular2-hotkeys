@@ -109,17 +109,29 @@ import {Hotkey} from './hotkey.model';
   .cfp-hotkeys {
     font-size: 1.2em;
   }
-}  `],
+}  
+.cfp-allhotkeys-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 30px;
+}
+
+.cfp-hotkey-container {
+  position: relative;
+}
+
+`],
     template : `<div class="cfp-hotkeys-container fade" [ngClass]="{'in': helpVisible}" style="display:none"><div class="cfp-hotkeys">
   <h4 class="cfp-hotkeys-title">{{ title }}</h4>
-  <table><tbody>
-    <tr *ngFor="let hotkey of hotkeys">
-      <td class="cfp-hotkeys-keys">
+  <div class="cfp-allhotkeys-container">
+    <div class="cfp-hotkey-container" *ngFor="let hotkey of hotkeys">
+      <span class="cfp-hotkeys-keys">
         <span *ngFor="let key of hotkey.formatted" class="cfp-hotkeys-key">{{ key }}</span>
-      </td>
-      <td class="cfp-hotkeys-text">{{ hotkey.description }}</td>
-    </tr>
-  </tbody></table>
+      </span>
+      <span class="cfp-hotkeys-text">{{ hotkey.description }}</span>
+    </div>
+  </div>
   <div class="cfp-hotkeys-close" (click)="toggleCheatSheet()">&#215;</div>
 </div></div>`,
 })
